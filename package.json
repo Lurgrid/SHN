@@ -1,0 +1,23 @@
+{
+  "name": "shn",
+  "version": "0.0.1",
+  "description": "Module to fetch last story of Hacker News",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lurgrid/SHN.git"
+  },
+  "author": "Lurgrid",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Lurgrid/SHN/issues"
+  },
+  "homepage": "https://github.com/Lurgrid/SHN#readme",
+  "dependencies": {
+    "got": "^12.0.0"
+  }
+}
