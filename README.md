@@ -34,8 +34,7 @@ title | The title of the story, poll or job. HTML.
 parts | A list of related pollopts, in display order.
 descendants | In the case of stories or polls, the total comment count.
 
-For example, a story: https://hacker-news.firebaseio.com/v0/item/8863.json?print=pretty
-
+For example, a story:
 ```javascript
 {
   "by" : "dhouston",
