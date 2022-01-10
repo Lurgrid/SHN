@@ -29,7 +29,9 @@ export class Client extends event {
         
     }
     async ListStory() {
-        const res = await got("https://hacker-news.firebaseio.com/v0/newstories.json").json().catch(err => {})
+        const res = await got("https://hacker-news.firebaseio.com/v0/newstories.json").json().catch(err => {
+            this.emit("error", err, "ERROR: Fetching list of story")
+        })
         if (res == undefined){
             return true
         }else{
@@ -37,7 +39,9 @@ export class Client extends event {
         }
     }
     async StoryData(sto) {
-        const res = await got(`https://hacker-news.firebaseio.com/v0/item/${sto}.json`).json().catch(err => {})
+        const res = await got(`https://hacker-news.firebaseio.com/v0/item/${sto}.json`).json().catch(err => {
+            this.emit("error", err, "ERROR: Fetching data of story")
+        })
         if (res == undefined){
             return true
         }else{

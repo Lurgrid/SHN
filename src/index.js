@@ -11,3 +11,7 @@ SHN.once("ready", () => {
 SHN.on("NewStory", data => {
     console.log(data)
 })
+
+SHN.on("error", (err, where) => {
+    console.log(where)
+})

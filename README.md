@@ -14,6 +14,10 @@ SHN.once("ready", () => {
 SHN.on("NewStory", data => {
     console.log(data)
 })
+
+SHN.on("error", (err, msg) => {
+  console.log(msg)
+})
 ```
 ### Data
 Field | Description
@@ -48,3 +52,14 @@ For example, a story:
   "url" : "http://www.getdropbox.com/u/2/screencast.html"
 }
 ```
+## Error
+The only reason to trigger the "error" event, is an error when connecting to the server to get the stories 
+
+### msg
+There are 2 types of messages :
+
+1. ERROR: Fetching list of story
+2. ERROR: Fetching data of story
+
+### err
+This object is the return error message of the fetch
